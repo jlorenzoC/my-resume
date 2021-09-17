@@ -1,4 +1,3 @@
-import { environment } from './../../environments/environment';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InDevelopmentComponent } from './in-development/in-development.component';
@@ -8,11 +7,11 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: environment.rootPath + 'welcome',
+    redirectTo: 'welcome',
   },
-  { path: environment.rootPath + 'welcome', component: WipWelcomeComponent },
+  { path: 'welcome', component: WipWelcomeComponent },
   {
-    path: environment.rootPath + 'in-development',
+    path: 'in-development',
     component: InDevelopmentComponent,
   },
   { path: '**', redirectTo: '' },
