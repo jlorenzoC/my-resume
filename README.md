@@ -1,6 +1,6 @@
 # My Resume
 
-Yeah, my resume. You are welcome to give me a hand :grinning: ...
+Yeah, my resume. I will have fun coding my online resume. You are welcome to give me a hand :grinning: ...
 
 
 ## Angular CLI version
