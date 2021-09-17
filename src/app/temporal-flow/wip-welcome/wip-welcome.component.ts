@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,10 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WipWelcomeComponent implements OnInit {
+  resourceRootPath = '';
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.resourceRootPath = environment.rootPath;
+  }
 }

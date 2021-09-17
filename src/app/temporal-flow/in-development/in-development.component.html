@@ -12,6 +12,10 @@
     >
   </h3>
 </div>
-<button color="primary" mat-fab routerLink="/welcome">
+<button
+  color="primary"
+  mat-fab
+  [routerLink]="'/' + resourceRootPath + 'welcome'"
+>
   <mat-icon>arrow_back</mat-icon>
 </button>
