@@ -1,0 +1,22 @@
+:host {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  height: 100%;
+}
+
+.resume-welcome-card {
+  max-width: 400px;
+}
+
+p {
+  text-align: justify;
+}
+
+::ng-deep a > .mat-button-wrapper {
+  display: flex;
+  align-items: center;
+  & > mat-icon {
+    margin-left: 2px;
+  }
+}
