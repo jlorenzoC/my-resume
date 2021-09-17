@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-in-development',
@@ -7,7 +8,10 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InDevelopmentComponent implements OnInit {
+  resourceRootPath = '';
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.resourceRootPath = environment.rootPath;
+  }
 }
