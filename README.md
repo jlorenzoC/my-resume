@@ -2,6 +2,10 @@
 
 Yeah, my resume. I will have fun coding my online resume. You are welcome to give me a hand :grinning: ...
 
+This is how i've planed the UI so far:  
+
+![wireframes](https://raw.githubusercontent.com/jlorenzoC/my-resume/main/My%20resume%20wireframes.webp)
+
 
 ## Angular CLI version
 
