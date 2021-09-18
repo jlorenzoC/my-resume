@@ -9,10 +9,11 @@ const routes: Routes = [
     pathMatch: 'full',
     redirectTo: 'welcome',
   },
-  { path: 'welcome', component: WipWelcomeComponent },
+  { path: 'welcome', component: WipWelcomeComponent,data:{animation:'welcome'} },
   {
     path: 'in-development',
     component: InDevelopmentComponent,
+    data:{animation:'in-development'}
   },
   { path: '**', redirectTo: '' },
 ];
