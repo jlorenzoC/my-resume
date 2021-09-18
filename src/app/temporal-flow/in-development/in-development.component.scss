@@ -3,10 +3,13 @@
   display: grid;
   justify-items: center;
   align-items: center;
-  h1 {
-    text-align: center;
-  }
-  h3 {
-    text-align: center;
-  }
+}
+h1 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+::ng-deep button.mat-fab{
+  margin: 0 5px;
 }
