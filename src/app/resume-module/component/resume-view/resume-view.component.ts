@@ -8,6 +8,7 @@ import { MainComponent } from '../main/main.component';
 import { AsideComponent } from '../aside/aside.component';
 import { FooterComponent } from '../footer/footer.component';
 import { LeftNavigationComponent } from '../left-navigation/left-navigation.component';
+import { SectionContent } from '../../model/section-content';
 
 @Component({
   selector: 'app-resume-view',
@@ -16,13 +17,7 @@ import { LeftNavigationComponent } from '../left-navigation/left-navigation.comp
 })
 export class ResumeViewComponent implements OnInit, OnDestroy {
   breakpointsToMatch = [Breakpoints.Handset, Breakpoints.Small];
-  cards: Observable<
-    {
-      cols: number;
-      rows: number;
-      content: Portal<any> | undefined;
-    }[]
-  >;
+  cards: Observable<SectionContent[]>;
   selectedPortal: Portal<any> | undefined;
   introductionComponent = new ComponentPortal(IntroductionComponent);
   mainComponent = new ComponentPortal(MainComponent);
@@ -35,33 +30,17 @@ export class ResumeViewComponent implements OnInit, OnDestroy {
       map(({ matches }) => {
         if (matches) {
           return [
-            {
-              cols: 6,
-              rows: 3,
-              content: this.introductionComponent,
-            },
-            { cols: 6, rows: 6, content: this.mainComponent },
-            {
-              cols: 6,
-              rows: 1,
-              content: this.footerComponent,
-            },
+            new SectionContent(6, 3, this.introductionComponent),
+            new SectionContent(6, 6, this.mainComponent),
+            new SectionContent(6, 1, this.footerComponent),
           ];
         }
         return [
-          {
-            cols: 6,
-            rows: 3,
-            content: this.introductionComponent,
-          },
-          {
-            cols: 1,
-            rows: 5,
-            content: this.leftNavigationComponent,
-          },
-          { cols: 4, rows: 5, content: this.mainComponent },
-          { cols: 1, rows: 5, content: this.asideComponent },
-          { cols: 6, rows: 1, content: this.footerComponent },
+          new SectionContent(6, 3, this.introductionComponent),
+          new SectionContent(1, 5, this.leftNavigationComponent),
+          new SectionContent(4, 5, this.mainComponent),
+          new SectionContent(1, 5, this.asideComponent),
+          new SectionContent(6, 1, this.footerComponent),
         ];
       })
     );
