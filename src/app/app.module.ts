@@ -9,9 +9,13 @@ import { AppComponent } from './app.component';
 import { ResumeRouterModule } from './temporal-flow/resume-router.module';
 import { InDevelopmentComponent } from './temporal-flow/in-development/in-development.component';
 import { WipWelcomeComponent } from './temporal-flow/wip-welcome/wip-welcome.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { ResumeViewComponent } from './resume-view/resume-view.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
-  declarations: [AppComponent, InDevelopmentComponent, WipWelcomeComponent],
+  declarations: [AppComponent, InDevelopmentComponent, WipWelcomeComponent, ResumeViewComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -20,6 +24,9 @@ import { WipWelcomeComponent } from './temporal-flow/wip-welcome/wip-welcome.com
     MatIconModule,
     MatButtonModule,
     MatSnackBarModule,
+    LayoutModule,
+    MatGridListModule,
+    MatMenuModule,
   ],
   bootstrap: [AppComponent],
 })
