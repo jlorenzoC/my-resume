@@ -1,3 +1,4 @@
+import { ResumeViewComponent } from '../resume-view/resume-view.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InDevelopmentComponent } from './in-development/in-development.component';
@@ -14,6 +15,11 @@ const routes: Routes = [
     path: 'in-development',
     component: InDevelopmentComponent,
     data:{animation:'in-development'}
+  },
+  {
+    path: 'resume-view',
+    component: ResumeViewComponent,
+    data:{animation:'resume-view'}
   },
   { path: '**', redirectTo: '' },
 ];
