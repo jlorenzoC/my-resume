@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ComponentPortal, Portal } from '@angular/cdk/portal';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IntroductionComponent } from '../introduction/introduction.component';
@@ -15,7 +15,7 @@ import { SectionContent } from '../../model/section-content';
   templateUrl: './resume-view.component.html',
   styleUrls: ['./resume-view.component.scss'],
 })
-export class ResumeViewComponent implements OnInit, OnDestroy {
+export class ResumeViewComponent implements OnDestroy {
   breakpointsToMatch = [Breakpoints.Handset, Breakpoints.Small];
   cards: Observable<SectionContent[]>;
   selectedPortal: Portal<any> | undefined;
@@ -45,8 +45,6 @@ export class ResumeViewComponent implements OnInit, OnDestroy {
       })
     );
   }
-
-  ngOnInit(): void {}
 
   ngOnDestroy(): void {
     this.breakpointObserver.ngOnDestroy();
