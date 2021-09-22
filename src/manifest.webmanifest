@@ -1,6 +1,6 @@
 {
-  "name": "my-resume",
-  "short_name": "my-resume",
+  "name": "Javier's ResuMe",
+  "short_name": "ResuMe",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
