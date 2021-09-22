@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -12,6 +12,6 @@ export class InDevelopmentComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.resourceRootPath = environment.rootPath;
+    this.resourceRootPath = '../../..' + environment.rootPath + '/assets/';
   }
 }
