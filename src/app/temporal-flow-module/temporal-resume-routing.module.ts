@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InDevelopmentComponent } from '../in-devopment-module/component/in-development/in-development.component';
 import { WipWelcomeComponent } from './component/wip-welcome/wip-welcome.component';
 
 const routes: Routes = [
