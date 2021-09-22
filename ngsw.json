@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "timestamp": 1632321051080,
+  "index": "/my-resume/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/my-resume/44.d0c351bc70d695c8d5a3.js",
+        "/my-resume/964.3c4da26362f780268023.js",
+        "/my-resume/favicon.ico",
+        "/my-resume/index.html",
+        "/my-resume/main.fa807282a789295d5e9a.js",
+        "/my-resume/manifest.webmanifest",
+        "/my-resume/polyfills.6eb4980af6cb1809e20b.js",
+        "/my-resume/runtime.2e3d377ba95825e91200.js",
+        "/my-resume/styles.296c0c8529015de2b403.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/my-resume/assets/icons/icon-128x128.png",
+        "/my-resume/assets/icons/icon-144x144.png",
+        "/my-resume/assets/icons/icon-152x152.png",
+        "/my-resume/assets/icons/icon-192x192.png",
+        "/my-resume/assets/icons/icon-384x384.png",
+        "/my-resume/assets/icons/icon-512x512.png",
+        "/my-resume/assets/icons/icon-72x72.png",
+        "/my-resume/assets/icons/icon-96x96.png",
+        "/my-resume/assets/webp/waiting.webp"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/my-resume/44.d0c351bc70d695c8d5a3.js": "0903cc3ae35ea179f41e566e6e51ce3313c79b3d",
+    "/my-resume/964.3c4da26362f780268023.js": "a58bf7eb6c6d995ae10a384ad5a8f39f8c2aaa60",
+    "/my-resume/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/my-resume/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/my-resume/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/my-resume/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/my-resume/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/my-resume/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/my-resume/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/my-resume/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/my-resume/assets/webp/waiting.webp": "e58f1420058b834a38618ea701955599578a5b70",
+    "/my-resume/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/my-resume/index.html": "6d350064cf927d68d171c34adf8783e1000eed14",
+    "/my-resume/main.fa807282a789295d5e9a.js": "95ec9b589c0857db87c341c8ed8e82267e93ff23",
+    "/my-resume/manifest.webmanifest": "93209f969ec238663477b3578338a52370bc2524",
+    "/my-resume/polyfills.6eb4980af6cb1809e20b.js": "5ff9f3d2f6b838a6854919908bcb61967f73b5a3",
+    "/my-resume/runtime.2e3d377ba95825e91200.js": "91a49214ea587bd528f42bad52b6f5775949d2f8",
+    "/my-resume/styles.296c0c8529015de2b403.css": "0d824ffdd30fe19ca21de258d08006eae0154542"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
