@@ -11,6 +11,16 @@ h2 {
   text-align: center;
   font-weight: 300;
 }
-::ng-deep button.mat-fab{
+::ng-deep button.mat-fab {
   margin: 0 5px;
+}
+
+.video-container {
+  display: grid;
+  justify-items: center;
+  padding: 0 1rem;
+}
+
+video {
+  width: min(533px, 100%);
 }
