@@ -1,3 +1,4 @@
+import { IntroductionComponent } from './component/introduction/introduction.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { PortalModule } from '@angular/cdk/portal';
 import { CommonModule } from '@angular/common';
@@ -6,9 +7,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { SharedMaterialModule } from '../shared-module/shared-material.module';
 import { ResumeRoutingModule } from './resume-routing.module';
 import { ResumeViewComponent } from './component/resume-view/resume-view.component';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
 @NgModule({
-  declarations: [ResumeViewComponent],
+  declarations: [ResumeViewComponent, IntroductionComponent],
   imports: [
     CommonModule,
     MatGridListModule,
@@ -16,6 +17,7 @@ import { ResumeViewComponent } from './component/resume-view/resume-view.compone
     PortalModule,
     SharedMaterialModule,
     ResumeRoutingModule,
+    MatToolbarModule,
   ],
 })
 export class ResumeModule {}
