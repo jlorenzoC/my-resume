@@ -1,4 +1,4 @@
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { ComponentPortal, Portal } from '@angular/cdk/portal';
 import { Component, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -9,6 +9,7 @@ import { AsideComponent } from '../aside/aside.component';
 import { FooterComponent } from '../footer/footer.component';
 import { LeftNavigationComponent } from '../left-navigation/left-navigation.component';
 import { SectionContent } from '../../model/section-content';
+import { breakpointsToMatch } from 'src/app/screen-breakpoints/breakpoints';
 
 @Component({
   selector: 'app-resume-view',
@@ -26,7 +27,7 @@ export class ResumeViewComponent implements OnDestroy {
   footerComponent = new ComponentPortal(FooterComponent);
 
   constructor(private breakpointObserver: BreakpointObserver) {
-    this.cards = this.breakpointObserver.observe(this.breakpointsToMatch).pipe(
+    this.cards = this.breakpointObserver.observe(breakpointsToMatch).pipe(
       map(({ matches }) => {
         if (matches) {
           return [
