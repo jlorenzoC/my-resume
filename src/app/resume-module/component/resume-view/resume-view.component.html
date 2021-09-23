@@ -11,10 +11,10 @@
 </div>
 <mat-grid-list [cols]="COLS" rowHeight="100px">
   <mat-grid-tile
-    *ngFor="let card of cards | async"
-    [colspan]="card.colspan"
-    [rowspan]="card.rowspan"
+    *ngFor="let section of sections | async"
+    [colspan]="section.colspan"
+    [rowspan]="section.rowspan"
   >
-    <ng-template [cdkPortalOutlet]="card.content"></ng-template>
+    <ng-template [cdkPortalOutlet]="section.content"></ng-template>
   </mat-grid-tile>
 </mat-grid-list>

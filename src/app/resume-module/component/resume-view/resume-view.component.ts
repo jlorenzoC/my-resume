@@ -17,9 +17,7 @@ import { breakpointsToMatch } from 'src/app/screen-breakpoints/breakpoints';
   styleUrls: ['./resume-view.component.scss'],
 })
 export class ResumeViewComponent implements OnDestroy {
-  breakpointsToMatch = [Breakpoints.Handset, Breakpoints.Small];
-  cards: Observable<SectionContent[]>;
-  selectedPortal: Portal<any> | undefined;
+  sections: Observable<SectionContent[]>;
   introductionComponent = new ComponentPortal(IntroductionComponent);
   mainComponent = new ComponentPortal(MainComponent);
   leftNavigationComponent = new ComponentPortal(LeftNavigationComponent);
@@ -28,7 +26,7 @@ export class ResumeViewComponent implements OnDestroy {
   readonly COLS = 6;
 
   constructor(private breakpointObserver: BreakpointObserver) {
-    this.cards = this.breakpointObserver.observe(breakpointsToMatch).pipe(
+    this.sections = this.breakpointObserver.observe(breakpointsToMatch).pipe(
       map(({ matches }) => {
         if (matches) {
           return [
