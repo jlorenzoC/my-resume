@@ -1,15 +1,15 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { ComponentPortal, Portal } from '@angular/cdk/portal';
+import { ComponentPortal } from '@angular/cdk/portal';
 import { Component, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { IntroductionComponent } from '../introduction/introduction.component';
-import { MainComponent } from '../main/main.component';
+import { breakpointsToMatch } from 'src/app/screen-breakpoints/breakpoints';
+import { SectionContent } from '../../model/section-content';
 import { AsideComponent } from '../aside/aside.component';
 import { FooterComponent } from '../footer/footer.component';
+import { IntroductionComponent } from '../introduction/introduction.component';
 import { LeftNavigationComponent } from '../left-navigation/left-navigation.component';
-import { SectionContent } from '../../model/section-content';
-import { breakpointsToMatch } from 'src/app/screen-breakpoints/breakpoints';
+import { MainComponent } from '../main/main.component';
 
 @Component({
   selector: 'app-resume-view',
