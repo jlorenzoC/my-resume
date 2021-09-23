@@ -12,19 +12,14 @@
   right: 10px;
 }
 
-.dashboard-card-content {
-  text-align: center;
-}
-
-.back-btn {
+mat-toolbar {
   display: flex;
-  align-items: center;
-  margin: 10px 0;
-  h1{
-    margin-bottom: 0 !important;
-  }
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
 }
 
-mat-grid-tile:last-of-type{
-  height: 100px !important;
+menu {
+  display: flex;
+  list-style-type: none;
 }

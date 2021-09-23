@@ -1,14 +1,1 @@
-<mat-toolbar color="primary" role="heading">
-  <span>Javier's</span>
 
-  <button mat-icon-button *ngIf="isSmallViewActive | async; else menuOfButtons">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <ng-template #menuOfButtons>
-    <menu role="menu">
-      <li><button mat-button>Sumary</button></li>
-      <li><button mat-button>Training and Experience</button></li>
-      <li><button mat-button>Abilities</button></li>
-    </menu>
-  </ng-template>
-</mat-toolbar>

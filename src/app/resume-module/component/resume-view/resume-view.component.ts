@@ -26,6 +26,10 @@ export class ResumeViewComponent implements OnDestroy {
   readonly COLS = 6;
 
   constructor(private breakpointObserver: BreakpointObserver) {
+    this.isSmallViewActive = this.breakpointObserver
+      .observe(breakpointsToMatch)
+      .pipe(map(({ matches }) => matches));
+
     this.sections = this.breakpointObserver
       .observe(breakpointsToMatch)
       .pipe(map(this.getSections));
