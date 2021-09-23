@@ -1,7 +1,7 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { Component, OnDestroy } from '@angular/core';
-import { happyEmojis } from 'random-happy-emoji';
+import happyEmojis from 'random-happy-emoji';
 import { Observable, timer } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { breakpointsToMatch } from 'src/app/screen-breakpoints/breakpoints';
