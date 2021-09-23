@@ -1,4 +1,4 @@
-import { BreakpointObserver } from '@angular/cdk/layout';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { Component, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -26,9 +26,15 @@ export class ResumeViewComponent implements OnDestroy {
   readonly COLS = 6;
 
   constructor(private breakpointObserver: BreakpointObserver) {
-    this.sections = this.breakpointObserver.observe(breakpointsToMatch).pipe(
-      map(({ matches }) => {
-        if (matches) {
+    this.sections = this.breakpointObserver
+      .observe(breakpointsToMatch)
+      .pipe(map(this.getSections));
+  }
+
+  private getSections = (
+    breakPointState: BreakpointState
+  ): SectionContent[] => {
+    if (breakPointState.matches) {
           return [
             new SectionContent(this.COLS, 3, this.introductionComponent),
             new SectionContent(this.COLS, 6, this.mainComponent),
@@ -42,9 +48,7 @@ export class ResumeViewComponent implements OnDestroy {
           new SectionContent(1, 5, this.asideComponent),
           new SectionContent(this.COLS, 1, this.footerComponent),
         ];
-      })
-    );
-  }
+  };
 
   ngOnDestroy(): void {
     this.breakpointObserver.ngOnDestroy();
