@@ -25,23 +25,24 @@ export class ResumeViewComponent implements OnDestroy {
   leftNavigationComponent = new ComponentPortal(LeftNavigationComponent);
   asideComponent = new ComponentPortal(AsideComponent);
   footerComponent = new ComponentPortal(FooterComponent);
+  readonly COLS = 6;
 
   constructor(private breakpointObserver: BreakpointObserver) {
     this.cards = this.breakpointObserver.observe(breakpointsToMatch).pipe(
       map(({ matches }) => {
         if (matches) {
           return [
-            new SectionContent(6, 3, this.introductionComponent),
-            new SectionContent(6, 6, this.mainComponent),
-            new SectionContent(6, 1, this.footerComponent),
+            new SectionContent(this.COLS, 3, this.introductionComponent),
+            new SectionContent(this.COLS, 6, this.mainComponent),
+            new SectionContent(this.COLS, 1, this.footerComponent),
           ];
         }
         return [
-          new SectionContent(6, 3, this.introductionComponent),
+          new SectionContent(this.COLS, 3, this.introductionComponent),
           new SectionContent(1, 5, this.leftNavigationComponent),
           new SectionContent(4, 5, this.mainComponent),
           new SectionContent(1, 5, this.asideComponent),
-          new SectionContent(6, 1, this.footerComponent),
+          new SectionContent(this.COLS, 1, this.footerComponent),
         ];
       })
     );

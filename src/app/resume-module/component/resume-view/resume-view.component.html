@@ -9,7 +9,7 @@
   </button>
   <h1>Dashboard</h1>
 </div>
-<mat-grid-list cols="6" rowHeight="100px">
+<mat-grid-list [cols]="COLS" rowHeight="100px">
   <mat-grid-tile
     *ngFor="let card of cards | async"
     [colspan]="card.colspan"
