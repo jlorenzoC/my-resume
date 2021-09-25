@@ -11,15 +11,3 @@
   transform: translateX(-50%);
   left: 50%;
 }
-
-mat-toolbar {
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0px;
-}
-
-menu {
-  display: flex;
-  list-style-type: none;
-}

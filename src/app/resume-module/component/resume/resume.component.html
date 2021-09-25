@@ -1,0 +1,36 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="'navigation'"
+    mode="over"
+    position="end"
+  >
+    <mat-toolbar><app-header-name></app-header-name></mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item>Summary</a>
+      <a mat-list-item>Training and Experience</a>
+      <a mat-list-item>Abilities</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-happy-emoji-banner></app-happy-emoji-banner>
+    <mat-toolbar color="primary">
+      <ng-container *ngIf="!drawer.opened">
+        <app-header-name></app-header-name>
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *appMobileView
+        >
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </ng-container>
+      <app-navegation-buttons *appDesktopView></app-navegation-buttons>
+    </mat-toolbar>
+    <app-sections [isMobileView]="isHandset$ | async"></app-sections>
+  </mat-sidenav-content>
+</mat-sidenav-container>

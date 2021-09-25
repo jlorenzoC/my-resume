@@ -1,0 +1,9 @@
+<mat-grid-list [cols]="COLS" rowHeight="100px">
+  <mat-grid-tile
+    *ngFor="let section of sections"
+    [colspan]="section.colspan"
+    [rowspan]="section.rowspan"
+  >
+    <ng-template [cdkPortalOutlet]="section.content"></ng-template>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ResumeViewComponent } from './component/resume-view/resume-view.component';
+import { ResumeComponent } from './component/resume/resume.component';
 
-const resumeModuleRoutes: Routes = [
-  { path: '', component: ResumeViewComponent },
-];
+const resumeModuleRoutes: Routes = [{ path: '', component: ResumeComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(resumeModuleRoutes)],
