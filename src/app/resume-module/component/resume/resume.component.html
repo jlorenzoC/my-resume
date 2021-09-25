@@ -7,7 +7,9 @@
     mode="over"
     position="end"
   >
-    <mat-toolbar><app-header-name></app-header-name></mat-toolbar>
+    <mat-toolbar color="primary">
+      <app-header-name></app-header-name>
+    </mat-toolbar>
     <mat-nav-list>
       <a mat-list-item>Summary</a>
       <a mat-list-item>Training and Experience</a>
@@ -16,7 +18,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <app-happy-emoji-banner></app-happy-emoji-banner>
-    <mat-toolbar color="primary" class="mat-elevation-z6">
+    <mat-toolbar color="primary" class="mat-elevation-z6 desktop-view">
       <ng-container *ngIf="!drawer.opened">
         <app-header-name></app-header-name>
         <button
