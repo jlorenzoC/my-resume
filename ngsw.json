@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1632535861595,
+  "timestamp": 1632537027237,
   "index": "/my-resume/index.html",
   "assetGroups": [
     {
@@ -58,7 +58,7 @@
     "/my-resume/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/my-resume/assets/webp/waiting.webp": "e58f1420058b834a38618ea701955599578a5b70",
     "/my-resume/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/my-resume/index.html": "54787a6a0581f0aef3ec45eb8775b835300f3d27",
+    "/my-resume/index.html": "66decd72922b6c2453dc92b96d31a9011b04eab6",
     "/my-resume/main.64d77f424fc120941fdf.js": "a9e3d11fb7c18897001a21ca56ce4d69d5b7fc8e",
     "/my-resume/manifest.webmanifest": "de834bf1b5976d80911330e3f4c6fd4297f90865",
     "/my-resume/polyfills.6eb4980af6cb1809e20b.js": "5ff9f3d2f6b838a6854919908bcb61967f73b5a3",
