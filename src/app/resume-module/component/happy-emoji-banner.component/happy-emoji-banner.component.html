@@ -4,8 +4,11 @@
     color="accent"
     mat-icon-button
     routerLink="/in-development"
+    *ngIf="!mobileMenuOpened"
   >
     <mat-icon>arrow_back</mat-icon>
   </button>
-  <span class="emoji">{{ happyEmoji | async }}</span>
+  <span [class.mobile-menu-opened]="mobileMenuOpened" class="emoji">{{
+    happyEmoji | async
+  }}</span>
 </div>

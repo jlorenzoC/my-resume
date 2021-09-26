@@ -11,3 +11,10 @@
   transform: translateX(-50%);
   left: 50%;
 }
+
+.emoji.mobile-menu-opened {
+  padding: 5px 0 0 5px;
+  position: relative;
+  transform: initial;
+  left: initial;
+}

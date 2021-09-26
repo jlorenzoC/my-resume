@@ -1,5 +1,5 @@
 import happyEmojis from 'random-happy-emoji';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Observable, timer } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -11,6 +11,8 @@ import { map } from 'rxjs/operators';
 })
 export class HappyEmojiBannerComponent {
   happyEmoji: Observable<string>;
+
+  @Input() mobileMenuOpened = false;
 
   constructor() {
     this.happyEmoji = timer(0, 3000).pipe(map(happyEmojis));
