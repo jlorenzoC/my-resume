@@ -17,7 +17,10 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <app-happy-emoji-banner></app-happy-emoji-banner>
+    <app-happy-emoji-banner
+      [class.emoji-banner-fixed]="drawer.opened"
+      [mobileMenuOpened]="drawer.opened"
+    ></app-happy-emoji-banner>
     <mat-toolbar
       *ngIf="!drawer.opened"
       class="mat-elevation-z6 desktop-view resume-navbar"
