@@ -1,4 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
+@mixin gradient($backgroundColor, $secondColor) {
+  background: $backgroundColor;
+  background: linear-gradient(
+    90deg,
+    $backgroundColor,
+    $secondColor 100%,
+    #00d4ff 100%
+  );
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.resume-navbar {
+  @include gradient(#020024, #79096f);
+}
+
+.resume-footer {
+  @include gradient(#79096f, #020024);
+}

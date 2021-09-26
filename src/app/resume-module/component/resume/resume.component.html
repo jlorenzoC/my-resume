@@ -7,7 +7,7 @@
     mode="over"
     position="end"
   >
-    <mat-toolbar color="primary">
+    <mat-toolbar class="resume-navbar">
       <app-header-name></app-header-name>
     </mat-toolbar>
     <mat-nav-list>
@@ -18,8 +18,11 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <app-happy-emoji-banner></app-happy-emoji-banner>
-    <mat-toolbar color="primary" class="mat-elevation-z6 desktop-view">
-      <ng-container *ngIf="!drawer.opened">
+    <mat-toolbar
+      *ngIf="!drawer.opened"
+      class="mat-elevation-z6 desktop-view resume-navbar"
+    >
+      <ng-container>
         <app-header-name></app-header-name>
         <button
           type="button"
