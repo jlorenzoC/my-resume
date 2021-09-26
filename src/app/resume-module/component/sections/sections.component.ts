@@ -2,7 +2,6 @@ import { ComponentPortal } from '@angular/cdk/portal';
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Section } from '../../model/section-content';
 import { AsideComponent } from '../aside/aside.component';
-import { FooterComponent } from '../footer/footer.component';
 import { IntroductionComponent } from '../introduction/introduction.component';
 import { LeftNavigationComponent } from '../left-navigation/left-navigation.component';
 import { MainComponent } from '../main/main.component';
@@ -24,12 +23,10 @@ export class SectionsComponent implements OnChanges {
     const leftNavigation = new ComponentPortal(LeftNavigationComponent);
     const main = new ComponentPortal(MainComponent);
     const aside = new ComponentPortal(AsideComponent);
-    const footer = new ComponentPortal(FooterComponent);
 
     this.mobileSections = [
       new Section(this.COLS, 3, introduction),
       new Section(this.COLS, 7, main),
-      new Section(this.COLS, 1, footer),
     ];
 
     this.desktopSections = [
@@ -37,7 +34,6 @@ export class SectionsComponent implements OnChanges {
       new Section(1, 5, leftNavigation),
       new Section(4, 5, main),
       new Section(1, 5, aside),
-      new Section(this.COLS, 1, footer),
     ];
   }
 

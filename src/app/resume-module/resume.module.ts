@@ -13,6 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MobileViewDirective } from '../directive/mobile-view/mobile-view.directive';
 import { SharedMaterialModule } from '../shared-module/shared-material.module';
 import { DesktopViewDirective } from './../directive/desktop-view/desktop-view.directive';
+import { FooterComponent } from './component/footer/footer.component';
 import { HappyEmojiBannerComponent } from './component/happy-emoji-banner.component/happy-emoji-banner.component';
 import { HeaderNameComponent } from './component/header-name/header-name.component';
 import { IntroductionComponent } from './component/introduction/introduction.component';
@@ -31,6 +32,7 @@ import { ResumeRoutingModule } from './resume-routing.module';
     MobileViewDirective,
     DesktopViewDirective,
     HeaderNameComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
