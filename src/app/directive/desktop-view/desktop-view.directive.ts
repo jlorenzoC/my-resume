@@ -5,7 +5,7 @@ import {
   TemplateRef,
   ViewContainerRef,
 } from '@angular/core';
-import { pluck } from 'rxjs/operators';
+import { distinctUntilChanged, pluck } from 'rxjs/operators';
 import { breakpointsToMatch } from 'src/app/screen-breakpoints/breakpoints';
 
 @Directive({
@@ -19,7 +19,7 @@ export class DesktopViewDirective implements OnDestroy {
   ) {
     this.breakpointObserver
       .observe(breakpointsToMatch)
-      .pipe(pluck('matches'))
+      .pipe(pluck('matches'), distinctUntilChanged())
       .subscribe(this.showHideHost);
   }
 
